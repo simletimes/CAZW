@@ -1,0 +1,131 @@
+/*首页头部*/
+body{
+	background-color: #FCF8E3;
+	text-align: center;
+}
+body ul li{
+	text-decoration: none;
+	list-style: none;
+	float: left;
+	margin-right: 20px;
+}
+.headimg img{
+	
+	width: 50px;
+	height: 50px;
+}
+.menu{
+	margin-right: 140px;
+	margin-top: 5px;
+}
+.logimg{
+	margin-right: 140px;
+}
+.head a{
+	text-decoration: none;
+	color: brown;
+	text-align: none;
+}
+.head a:hover{
+	text-decoration: none;
+	color: black;
+}
+/*首页身体*/
+.body{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.active img{
+	width: 100%;
+	height: 500px;
+}
+.news li a{
+	font-size: 12px;
+	text-decoration: none;
+	color: salmon;
+}
+.news li a:hover{
+	color: #999;
+}
+
+.news{
+	margin-top: 15px;
+	padding-top: 10px;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+.news-2  li a{
+	font-size: 12px;
+	text-decoration: none;
+	color: salmon;
+}
+.news-2 li a:hover{
+	color: #999;
+}
+/*猜你喜欢*/
+.youlike{
+	/*float: left;*/
+	padding: 5px;
+	border: 1px dashed #999999;
+	width: 100%;
+}
+.youlike a{
+	color: salmon;
+	font-size: 13px;
+}
+.youlike a:hover{
+	list-style: none;
+	text-decoration: none;
+	color: #999;
+}
+
+/*网页底部*/
+.foot{
+	/*position:fixed;
+	bottom:0px;
+	left:0px;*/
+	height: 100px;
+	width: 100%;
+	background: #343A40;
+}
+
+/*新闻列表页*/
+
+
+/*search搜索页面*/
+.news-list{
+	padding: 10px;
+	position: relative;
+	margin-left: 30%;
+	width: 40%;
+	height: 50%;
+	/*height: auto;*/
+	border: 1px dashed #999999;
+}
+
+/*CAZW后台*/
+.iframe-left{
+	border-radius: 0 0 5px 0;
+	width: 10%;
+	height: 605px;
+	background-color: #343a40;
+}
+.iframefloat{
+	float: left;
+}
+.iframe-right{
+	border-radius: 0 0 5px 5px;
+    border:none;
+	margin-right: 0px;
+	padding-right: 0px;
+	width: 90%;
+	height: 605px;
+}
+.operation{
+	float: left;  
+	height: 40px;
+}
+.operation img{
+	width: 18px;
+	height: 18px;
+}

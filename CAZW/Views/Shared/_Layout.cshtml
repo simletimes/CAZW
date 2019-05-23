@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title CAZW-首页</title>
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Resource/css/css.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content(" https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js")"></script>
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="@Url.Content(" https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js")"></script>
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="@Url.Content(" https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js")">
+    </script>
+    <style>
+        .carousel-inner img {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+    <script>
+			$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip();
+			});
+    </script>
+</head>
+<body>
+    <!-- 导航部分 -->
+    <div class="container-fluid navbar navbar-expand-md bg-dark navbar-dark" style="height: auto;">
+        <a class="headimg" data-toggle="tooltip" data-placement="top" title="后台管理" href="/Manage/Manage" style="margin-right: 20px;"><img src="@Url.Content("~/Resource/images/headimg.png")" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/Index">我的首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/news">新闻中心</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/search">资料查询</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/service">客服中心</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/login">登录</a>
+                </li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle btn-outline-primary" data-toggle="dropdown">
+                个人资料
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">资料设置</a>
+                <a class="dropdown-item" href="#">更改密码</a>
+                <a class="dropdown-item" href="#">我的主页</a>
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+    <hr />
+    <!-- 网页底部 -->
+    <div class="container-fluid foot">
+        <p style="color: #999999; text-align: center; padding-top: 30px; font-size: 12px;">
+            新闻hao123地图视频贴吧学术登录设置更多产品<br />
+            把百度设为主页关于百度About  Baidu百度推广<br />
+            ©2019 Baidu 使用百度前必读 意见反馈 京ICP证030173号  京公网安备11000002000001号
+        </p>
+    </div>
+</body>
+</html>
