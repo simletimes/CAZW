@@ -12,6 +12,15 @@ namespace CAZW.Controllers
         /// 登录页面（get获取返回登录视图）
         /// </summary>
         /// <returns></returns>
+        public ActionResult index()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// 登录页面（get获取返回登录视图）
+        /// </summary>
+        /// <returns></returns>
         public ActionResult login()
         {
             return View();

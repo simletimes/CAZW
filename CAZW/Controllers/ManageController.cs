@@ -23,6 +23,16 @@ namespace CAZW.Controllers
         /// iframe框架展示文章修改页面
         /// </summary>
         /// <returns></returns>
+        public ActionResult userManage()
+        {
+            return View();
+        }
+
+        // GET: Manage
+        /// <summary>
+        /// iframe框架展示文章修改页面
+        /// </summary>
+        /// <returns></returns>
         public ActionResult articleManage()
         {
             return View();
@@ -38,13 +48,32 @@ namespace CAZW.Controllers
         }
 
         /// <summary>
-        /// iframe框架展示用户编辑部分
+        /// iframe框架展示个人资料部分
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult userData()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// iframe框架展示个人资料部分
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult userAdd()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// iframe框架展示个人资料部分
         /// </summary>
         /// <returns></returns>
         public ActionResult userEdit()
         {
             return View();
         }
+
         /// <summary>
         /// iframe框架展示系统设置部分
         /// </summary>

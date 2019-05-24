@@ -1,12 +1,14 @@
-﻿
-@{
-    ViewBag.Title = "articleManage";
+﻿@{
+    ViewBag.Title = "userManage";
     Layout = null;
 }
+
 <!DOCTYPE html>
 
 <html>
 <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>userManage</title>
     <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Resource/css/css.css")" rel="stylesheet" type="text/css" />
     <script src="@Url.Content(" https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js")"></script>
@@ -18,62 +20,8 @@
 </head>
 <body>
     <div class="operation container">
-        <!-- 添加模态框 -->
-        <div class="modal fade" id="myModal">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <!-- 模态框头部 -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">添加文章</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <!-- 模态框主体 -->
-                    <div class="modal-body">
-                        <h5>您正在进行资料修改</h5>
-                        <ul class="list-group">
-                            <li class="list-group-item">文章名称:<input type="text" style="width: 300px;" placeholder="孤独中的落寞" /></li>
-                            <li class="list-group-item">文章作者:<input type="text" style="width: 300px;" placeholder="沐梦羽" /></li>
-                            <li class="list-group-item">文章内容:<input type="text" style="width: 500px; height: 600px;" placeholder="当你身处喧闹的都市，四处只是拥挤的人流……" /></li>
-                        </ul>
-                    </div>
-                    <!-- 模态框底部 -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">保存添加</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">我不添加了</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 编辑模态框 -->
-        <div class="modal fade" id="myModaledit">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <!-- 模态框头部 -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">添加文章</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <!-- 模态框主体 -->
-                    <div class="modal-body">
-                        <h5>您正在进行资料修改</h5>
-                        <ul class="list-group">
-                            <li class="list-group-item">文章名称:<input type="text" style="width: 300px;" placeholder="孤独中的落寞" /></li>
-                            <li class="list-group-item">文章作者:<input type="text" style="width: 300px;" placeholder="沐梦羽" /></li>
-                            <li class="list-group-item">文章内容:<input type="text" style="width: 500px; height: 600px;" placeholder="当你身处喧闹的都市，四处只是拥挤的人流……" /></li>
-                        </ul>
-                    </div>
-                    <!-- 模态框底部 -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">保存添加</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">我不添加了</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- 删除模态框 -->
-        <div class="modal fade" id="myModaldel">
+        <div class="modal fade" id="myModal">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <!-- 模态框头部 -->
@@ -83,7 +31,7 @@
                     </div>
                     <!-- 模态框主体 -->
                     <div class="modal-body">
-                        确定要删除该文章？
+                        确定要删除该用户？
                     </div>
                     <!-- 模态框底部 -->
                     <div class="modal-footer">
@@ -96,27 +44,27 @@
 
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link" href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                <a class="nav-link" href="/Manage/userAdd">
                     添加
-                    <img src="images/add.png" />
+                    <img src="@Url.Content("~/Resource/images/add.png")" />
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModaledit">
+                <a class="nav-link" href="/Manage/userEdit">
                     编辑
-                    <img src="images/alter.png" />
+                    <img src="@Url.Content("~/Resource/images/alter.png")" />
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModaldel">
+                <a class="nav-link" href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                     删除
-                    <img src="images/del.png" />
+                    <img src="@Url.Content("~/Resource/images/del.png")" />
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     查询
-                    <img src="images/search.png" />
+                    <img src="@Url.Content("~/Resource/images/search.png")" />
                     <input type="email" style="height: 20px; margin-left: 10px;" placeholder="请输入关键字">
                 </a>
             </li>
@@ -125,20 +73,19 @@
     <div class="clearfix"></div>
     <div class="lable container-fluid">
         <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" value="">
-                                全选
-                            </label>
-                        </div>
-                    </th>
-                    <th>文章名称</th>
-                    <th>文章内容</th>
-                    <th>文章作者</th>
-                </tr>
+            <tr>
+                <th>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">
+                            全选
+                        </label>
+                    </div>
+                </th>
+                <th>用户名称</th>
+                <th>登录名</th>
+                <th>用户类型</th>
+            </tr>
             </thead>
             <tbody>
                 <tr>
@@ -150,9 +97,9 @@
                             </label>
                         </div>
                     </td>
-                    <td>缘起则聚，缘灭则散</td>
-                    <td>夜，结束了一天的喧嚣后安静下来，伴随着远处路灯那微弱的光...</td>
-                    <td>丛林之狐</td>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>超级管理员</td>
                 </tr>
                 <tr>
                     <td>
@@ -163,9 +110,9 @@
                             </label>
                         </div>
                     </td>
-                    <td>孤独中的落寞</td>
-                    <td>当你身处喧闹的都市，四处只是拥挤的人流……</td>
-                    <td>静物</td>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>普通用户</td>
                 </tr>
                 <tr>
                     <td>
@@ -176,9 +123,9 @@
                             </label>
                         </div>
                     </td>
-                    <td>如果我们不曾相遇</td>
-                    <td>如果我们不曾相遇，故事的结局是否就不会让彼此泪流而去...</td>
-                    <td>沐梦羽</td>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>普通用户</td>
                 </tr>
                 <tr>
                     <td>
@@ -189,9 +136,9 @@
                             </label>
                         </div>
                     </td>
-                    <td>缘起则聚，缘灭则散</td>
-                    <td>夜，结束了一天的喧嚣后安静下来，伴随着远处路灯那微弱的光...</td>
-                    <td>丛林之狐</td>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>普通用户</td>
                 </tr>
                 <tr>
                     <td>
@@ -202,9 +149,9 @@
                             </label>
                         </div>
                     </td>
-                    <td>孤独中的落寞</td>
-                    <td>当你身处喧闹的都市，四处只是拥挤的人流……</td>
-                    <td>静物</td>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>普通用户</td>
                 </tr>
                 <tr>
                     <td>
@@ -215,9 +162,9 @@
                             </label>
                         </div>
                     </td>
-                    <td>如果我们不曾相遇</td>
-                    <td>如果，我们不曾相遇，故事的结局是否就不会让彼此泪流而去...</td>
-                    <td>沐梦羽</td>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>特约用户</td>
                 </tr>
                 <tr>
                     <td>
@@ -228,9 +175,9 @@
                             </label>
                         </div>
                     </td>
-                    <td>缘起则聚，缘灭则散</td>
-                    <td>夜，结束了一天的喧嚣后安静下来，伴随着远处路灯那微弱的光...</td>
-                    <td>丛林之狐</td>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>VIP用户</td>
                 </tr>
                 <tr>
                     <td>
@@ -241,9 +188,9 @@
                             </label>
                         </div>
                     </td>
-                    <td>孤独中的落寞</td>
-                    <td>当你身处喧闹的都市，四处只是拥挤的人流……</td>
-                    <td>静物</td>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>普通用户</td>
                 </tr>
                 <tr>
                     <td>
@@ -254,9 +201,9 @@
                             </label>
                         </div>
                     </td>
-                    <td>如果我们不曾相遇</td>
-                    <td>如果，我们不曾相遇，故事的结局是否就不会让彼此泪流而去...</td>
-                    <td>沐梦羽</td>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>普通用户</td>
                 </tr>
             </tbody>
         </table>

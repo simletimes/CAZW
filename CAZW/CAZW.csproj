@@ -119,59 +119,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\CAZW.dll" />
-    <Content Include="bin\CAZW.pdb" />
-    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
-    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
-    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
-    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
-    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
-    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
-    <Content Include="bin\Microsoft.AI.Web.dll" />
-    <Content Include="bin\Microsoft.AI.Web.xml" />
-    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
-    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
-    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
-    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
-    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
-    <Content Include="bin\roslyn\csc.exe" />
-    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
-    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
-    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
-    <Content Include="bin\roslyn\vbc.exe" />
-    <Content Include="bin\roslyn\VBCSCompiler.exe" />
-    <Content Include="bin\System.Web.Helpers.dll" />
-    <Content Include="bin\System.Web.Helpers.xml" />
-    <Content Include="bin\System.Web.Mvc.dll" />
-    <Content Include="bin\System.Web.Mvc.xml" />
-    <Content Include="bin\System.Web.Razor.dll" />
-    <Content Include="bin\System.Web.Razor.xml" />
-    <Content Include="bin\System.Web.Webpages.Deployment.dll" />
-    <Content Include="bin\System.Web.Webpages.Deployment.xml" />
-    <Content Include="bin\System.Web.Webpages.dll" />
-    <Content Include="bin\System.Web.Webpages.Razor.dll" />
-    <Content Include="bin\System.Web.Webpages.Razor.xml" />
-    <Content Include="bin\System.Web.Webpages.xml" />
-    <Content Include="bin\zh-Hans\System.Web.Helpers.resources.dll" />
-    <Content Include="bin\zh-Hans\System.Web.Mvc.resources.dll" />
-    <Content Include="bin\zh-Hans\System.Web.Razor.resources.dll" />
-    <Content Include="bin\zh-Hans\System.Web.Webpages.Deployment.resources.dll" />
-    <Content Include="bin\zh-Hans\System.Web.Webpages.Razor.resources.dll" />
-    <Content Include="bin\zh-Hans\System.Web.Webpages.resources.dll" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Resource\css\css.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="obj\Debug\CAZW.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\CAZW.dll" />
-    <Content Include="obj\Debug\CAZW.pdb" />
     <Content Include="Resource\images\add.png" />
     <Content Include="Resource\images\alter.png" />
     <Content Include="Resource\images\del.png" />
@@ -190,13 +143,7 @@
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="bin\ApplicationInsights.config" />
-    <Content Include="bin\CAZW.dll.config" />
-    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
-    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="obj\Debug\CAZW.csprojResolveAssemblyReference.cache" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Properties\PublishProfiles\CAZW.pubxml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -208,20 +155,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\articleManageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\indexController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\pwdAlterController.cs" />
-    <Compile Include="Controllers\systemSettingController.cs" />
-    <Compile Include="Controllers\userEditController.cs" />
-    <Compile Include="Controllers\userManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -238,17 +177,15 @@
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_LayoutManage.cshtml" />
     <Content Include="Views\Manage\Manage.cshtml" />
-    <Content Include="Views\index\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\login.cshtml" />
-    <Content Include="Views\userManage\userManage.cshtml" />
-    <Content Include="Views\articleManage\articleManage.cshtml" />
     <Content Include="Views\Manage\articleManage.cshtml" />
-    <Content Include="Views\pwdAlter\pwdAlter.cshtml" />
     <Content Include="Views\Manage\pwdAlter.cshtml" />
-    <Content Include="Views\userEdit\userEdit.cshtml" />
-    <Content Include="Views\Manage\userEdit.cshtml" />
-    <Content Include="Views\systemSetting\systemSetting.cshtml" />
+    <Content Include="Views\Manage\userData.cshtml" />
     <Content Include="Views\Manage\systemSetting.cshtml" />
+    <Content Include="Views\Manage\userManage.cshtml" />
+    <Content Include="Views\Manage\userAdd.cshtml" />
+    <Content Include="Views\Manage\userEdit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -259,7 +196,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Resource\js\" />
   </ItemGroup>
   <PropertyGroup>

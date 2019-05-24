@@ -16,29 +16,29 @@
 <body>
     <!-- 导航部分 -->
     <div class="container-fluid navbar navbar-expand-md bg-dark navbar-dark" style="height: auto;">
-        <a class="headimg" data-toggle="tooltip" data-placement="top" title="后台管理" href="/Manage/userManage" style="margin-right: 20px;"><img src="images/headimg.png" /></a>
+        <a class="headimg" data-toggle="tooltip" data-placement="top" title="后台管理" href="/Manage/userManage" style="margin-right: 20px;"><img src="@Url.Content("~/Resource/images/headimg.png")" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">我的首页</a>
+                    <a class="nav-link" href="/Home/Index">我的首页</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="news.html">新闻中心</a>
+                    <a class="nav-link" href="/Home/news">新闻中心</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="search.html">资料查询</a>
+                    <a class="nav-link" href="/Home/search">资料查询</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="service.html">客服中心</a>
+                    <a class="nav-link" href="/Home/service">客服中心</a>
                 </li>
             </ul>
         </div>
         <div class="dropdown">
             <a class="headimg" data-toggle="tooltip" data-placement="top" title="后台管理" href="/Manage/userManage" style="margin-right: 20px;">
-                <img src="images/headpic.png" />
+                <img src="@Url.Content("~/Resource/images/headpic.png")" />
             </a>
         </div>
     </div>
@@ -51,7 +51,7 @@
                         <a class="nav-link" target="iframe" href="/Manage/userManage">用户管理</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link newsclick" target="iframe" href="/Manage/articleManage">文章管理</a>
+                        <a class="nav-link" target="iframe" href="/Manage/articleManage">文章管理</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" target="iframe" href="/Manage/pwdAlter">修改密码</a>
@@ -65,9 +65,8 @@
                 </ul>
             </nav>
         </div>
-        <div class="iframe-right iframefloat">
-            @RenderBody()
-        </div>
+        
+        @RenderBody()
             
         <div class="clearfix"></div>
     </div>

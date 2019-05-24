@@ -1,15 +1,12 @@
-﻿
-@{
-    ViewBag.Title = "pwdAlter";
+﻿@{
+    ViewBag.Title = "";
     Layout = null;
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>修改密码</title>
+    <title>个人资料</title>
     <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Resource/css/css.css")" rel="stylesheet" type="text/css" />
     <script src="@Url.Content(" https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js")"></script>
@@ -26,29 +23,33 @@
                 <div class="modal-content">
                     <!-- 模态框头部 -->
                     <div class="modal-header">
-                        <h4 class="modal-title">请牢记您修改的密码</h4>
+                        <h4 class="modal-title">更新提醒</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <!-- 模态框主体 -->
                     <div class="modal-body">
-                        您确定要修改您的密码吗？
+                        您确定要更新您的资料吗？
                     </div>
                     <!-- 模态框底部 -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">确认修改</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">确认更新</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">我再想想</button>
                     </div>
                 </div>
             </div>
         </div>
-        <h5>请谨记您要做的修改</h5>
+        <h5>您正在进行资料修改</h5>
         <ul class="list-group">
-            <li class="list-group-item">请输入旧密码:<input type="text" /></li>
-            <li class="list-group-item">请输入新密码:<input type="text" /></li>
-            <li class="list-group-item">请再次输入新密码:<input type="text" /></li>
+            <li class="list-group-item">
+                头像:<img src="@Url.Content("~/Resource/images/headpic.png")" style=" margin-left: 20px; margin-right: 20px;">
+                <button type="button" class="btn btn-warning">更换头像</button>
+            </li>
+            <li class="list-group-item">用户名:<input type="text" style="width: 300px;" placeholder="沐梦羽" /></li>
+            <li class="list-group-item">登录名:<input type="text" style="width: 300px;" placeholder="MuMengYu" /></li>
+            <li class="list-group-item">签 名:<input type="text" style="width: 500px;" placeholder="当你身处喧闹的都市，四处只是拥挤的人流……" /></li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                    修改
+                    修改保存
                 </button>
             </li>
         </ul>

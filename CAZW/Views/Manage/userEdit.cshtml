@@ -1,5 +1,58 @@
 ﻿@{
     ViewBag.Title = "userEdit";
-    Layout = "~/Views/Shared/_LayoutManage.cshtml";
+    Layout = null;
 }
-<iframe name="iframe" id="MyIFrame" class="iframe-right" src="/pwdAlter/pwdAlter"></iframe>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户编辑</title>
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Resource/css/css.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content(" https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js")"></script>
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="@Url.Content(" https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js")"></script>
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="@Url.Content(" https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js")">
+    </script>
+</head>
+<body>
+    <div class="container" style="margin-top: 20px;">
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- 模态框头部 -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">更新提醒</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- 模态框主体 -->
+                    <div class="modal-body">
+                        您确定要更新您的资料吗？
+                    </div>
+                    <!-- 模态框底部 -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">确认更新</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">我再想想</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h5>您正在进行资料修改</h5>
+        <ul class="list-group">
+            <li class="list-group-item">
+                头像:<img src="@Url.Content("~/Resource/images/headpic.png")" style=" margin-left: 20px; margin-right: 20px;">
+                <button type="button" class="btn btn-warning">更换头像</button>
+            </li>
+            <li class="list-group-item">用户名:<input type="text" style="width: 300px;" placeholder="沐梦羽" /></li>
+            <li class="list-group-item">登录名:<input type="text" style="width: 300px;" placeholder="MuMengYu" /></li>
+            <li class="list-group-item">签 名:<input type="text" style="width: 500px;" placeholder="当你身处喧闹的都市，四处只是拥挤的人流……" /></li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                    修改保存
+                </button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
